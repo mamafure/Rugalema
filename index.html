@@ -31,15 +31,15 @@
 let attempts=0;
 
 
-let high,low,username=window.prompt(`Inter your username: `)
+let high,low,username=window.prompt(`Tafadhari,Weka jina lako: `)
 
 
 
 let llow=true;
 while(llow){
-     low=Number(window.prompt(`WELCOME ${username}, Inter your smallest number: `))
+     low=Number(window.prompt(`KARIBU ${username}, sasa weka namba ambayo ni ndogo: `))
 if(isNaN(low)){
-     window.alert(`Inter the valid number:`)
+     window.alert(`Tafadhari weka namba sahihi:`)
 }
 else{
      llow=false;
@@ -50,13 +50,13 @@ else{
 
 let hhigh=true;
 while(hhigh){
-     high=Number(window.prompt(`AGAIN ${username},Inter the largest number: `))
+     high=Number(window.prompt(` ${username},Sasa weka namba ambayo ni kubwa: `))
 if(isNaN(high)){
-     window.alert(`Inter the valid number:`)
+     window.alert(`Tafadhari,weka namba sahihi:`)
 }
 else if(high<low){
-     window.alert(`${username} you have input the number is lower than ${low}
-PLEASE! inter the number which is greater than ${low} to continue with next step.`)
+     window.alert(`${username} Umeweka namba ambayo ni ndogo kuliko${low}
+Tafadhali weka namba ambayo ni kubwa zaidi ya ${low} ili kuendelea.`)
 }
 else{
      hhigh=false;
@@ -70,13 +70,13 @@ let randomnum=Math.floor(Math.random()*(high-low)+low);
 let choise=true;
 while(choise){
 
-let gnum=window.prompt(`${username},NOW! gues the number between ${low} and ${high}:`);
+let gnum=window.prompt(`${username},BASHIRI NAMBA KATI YA ${low} NA ${high}:`);
 if(gnum<low){
-     window.alert(`${username} you have intered number less then ${low};
-PLEASE! inter the number between ${low} and ${high}: `)
+     window.alert(`${username} UMEWEKA NAMBA AMBAYO NI NDOGO KULIKO ${low};
+TAFADHARI WEKA NAMBA ILIYO KATI YA ${low} NA ${high}: `)
 }
 else if(gnum>high){
-     window.alert(`${username} you have intered number greater than ${high};
+     window.alert(`${username} UMEWEKA NAMBA AMBAYO NI KUBWA KULIKO ${high};
 PLEASE! inter the number between ${low} and ${high}: `)
 }
 else if(isNaN(gnum)){
