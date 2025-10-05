@@ -1,116 +1,262 @@
 <!DOCTYPE html>
+
 <!-- saved from url=(0037)http://127.0.0.1:5500/javascript.html -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <style>
+
         .btn{
+
             color: white;
+
             background-color: rgb(80, 80, 219);
+
             
+
         }
+
         #submit{
+
             font-size: 1em;
+
         }
+
     </style>
+
     
+
     <meta name="viewport" content="width=s, initial-scale=1.0">
+
     <title>Document</title>
+
 </head>
+
+
 
 <body>
 
+
+
     <img src="image1.jpeg" alt="" height="400px" width="400px"><br>
+
 <button id="start" style="color: aqua; align-items: center;background: none;">START THE GAME</button>
+
 <h1 style="color: red ;" id="aans"></h1>
+
     <script>
+
     
+
   document.getElementById("start").onclick=function()  
+
 {
 
 
 
-let attempts=0;
 
 
-let high,low,username=window.prompt(`Tafadhari,Weka jina lako: `)
 
 
+let attempts=1;
+
+
+
+
+
+let high,low,username=window.prompt(`TAFADHARI WEKA JINA LAKO ILIKIENDELEA: `)
+
+
+
+
+
+window.prompt(`KARIBU ${username},HUU NI MCHEZO WA KUKISIA NAMBA(GUES NUMBER GAME).UTAKACHOTAKIWA KUFANYA NI KUCHAGUA NAMBA YOYOTE AMBAYO NI NDOGO,HALAFU KUCHAGUA NAMBA AMBAYO NI KUBWA.BAADA YA HAPO UTABASHIRI NAMBA AMBAYO UNAHISI IKO KATI YA HIYO NAMBA NDOGO NA NAMBA KUBWA ULIZOZICHAGUA HAPO AWALI.
+
+NAKUTAKIA MCHEZO MWEMA 😊.`)
 
 let llow=true;
+
 while(llow){
-     low=Number(window.prompt(`KARIBU ${username}, sasa weka namba ambayo ni ndogo: `))
+
+     low=Number(window.prompt(`KARIBU ${username}, CHAGUA NAMBA AMBAYO NI NDOGO: `))
+
 if(isNaN(low)){
-     window.alert(`Tafadhari weka namba sahihi:`)
+
+     window.alert(`Weka namba Sahihi:`)
+
 }
+
 else{
+
      llow=false;
 
-}
+
 
 }
+
+
+
+}
+
+
 
 let hhigh=true;
+
 while(hhigh){
-     high=Number(window.prompt(` ${username},Sasa weka namba ambayo ni kubwa: `))
+
+     high=Number(window.prompt(` ${username},SASA CHAGUA NAMBA YOYOTE AMBAYO NI KUBWA: `))
+
 if(isNaN(high)){
-     window.alert(`Tafadhari,weka namba sahihi:`)
+
+     window.alert(`Weka namba sahihi:`)
+
 }
+
 else if(high<low){
-     window.alert(`${username} Umeweka namba ambayo ni ndogo kuliko${low}
-Tafadhali weka namba ambayo ni kubwa zaidi ya ${low} ili kuendelea.`)
+
+     window.alert(`${username} Umeweka namba ambayo ni ndogo zaidi ya ${low}.
+
+TFADHARI WEKA NAMBA AMBAYO NI KUBWA ZAIDI YA ${low} ILI KUENDELEA.`)
+
 }
+
 else{
+
      hhigh=false;
 
-}
+
 
 }
+
+
+
+}
+
 let randomnum=Math.floor(Math.random()*(high-low)+low);
 
 
+
+
+
 let choise=true;
+
 while(choise){
 
-let gnum=window.prompt(`${username},BASHIRI NAMBA KATI YA ${low} NA ${high}:`);
+
+
+let gnum=window.prompt(`${username},SASA KISIA NAMBA ILIYO KATI YA ${low} NA ${high}:`);
+
 if(gnum<low){
-     window.alert(`${username} UMEWEKA NAMBA AMBAYO NI NDOGO KULIKO ${low};
-TAFADHARI WEKA NAMBA ILIYO KATI YA ${low} NA ${high}: `)
-}
-else if(gnum>high){
-     window.alert(`${username} UMEWEKA NAMBA AMBAYO NI KUBWA KULIKO ${high};
+
+     window.alert(`${username} you have intered number less then ${low};
+
 PLEASE! inter the number between ${low} and ${high}: `)
+
 }
+
+else if(gnum>high){
+
+      window.alert(`${username} Umeweka namba ambayo ni KUBWA ZAIDI YA ${high}.
+
+TFADHARI WEKA NAMBA AMBAYO NI KUBWA ZAIDI YA ${high} ILI KUENDELEA.`)
+
+}
+
 else if(isNaN(gnum)){
-     window.alert(`HAUJAWEKA NAMBA YOUOTE!
-${username},TAFADHARI!WEKA NAMBA YOYOTE.`)
+
+     window.alert(`
+
+${username},TAFADHARI WEKA NAMBA,SI HERUFI`)
+
 }
+
 else{
 
+
+
 if(gnum>randomnum)
+
      {
-     ++attempts;
-window.alert(`NAMBA ULIYOWEKA NI KUBWA SANA ${username}
-     JARIBU TENA.`)
+
+     attempts++;
+
+window.alert(` ${username}
+
+     NAMBA ULIYO KISIA NI KUBWA SANA.TAFADHARI JARIBU TENA.`)
+
 }
+
      else if(gnum<randomnum){
+
           attempts++;
-          window.alert(`NAMBA ULIYOWEKA NI NDOGO SANA ${username}
-     TAFADHARI JARIBU TENA:`)
+
+          window.alert(` ${username}
+
+    NAMBA ULIYO KISIA NI NDOGO SANA.TAFADHARI JARIBU TENA`)
+
      }
+
      else{
-          window.alert(HONGERA SANA ${username},
-     NAMBA SAHIHI ILIKUA NI ${randomnum};NA IMEKUCHUKUA AWAMU ${attempts} KUBASHIRI NAMBA SAHIHI.`)
-          window.alert(`*******GAME OVER******************
-                         -ASANTE KWA MUDA WAKO😊-
-                          --imetengenezwa na Sisco--`)
+
+          window.alert(`HONGERA!${username},
+
+     NAMBA SAHIHI ILIKUWA NI ${randomnum};NA UMETUMIA AWAMU ${attempts} KUKISIA NAMBA SAHIHI`)
+
+          window.alert(`******GAME OVER******
+
+                         -asante kwa mda wako😊-
+
+                          --sisco created--`)
+
      choise=false;
+
           }
 
-}
 
 
 }
 
 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    document.getElementById(`exampletext`).textContent="this is an example";
+
+
+
+document.getElementById(`example2`).textContent=`this is another example`;
+
+    
+
+}
+
+
+
+</script></body></html>
 
 
 
